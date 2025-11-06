@@ -565,57 +565,6 @@
       .hero-buttons { flex-direction: column; }
       .services-grid, .services-detail-grid { grid-template-columns: 1fr; }
     }
-    @media (max-width: 768px) {
-  .hero-content {
-    grid-template-columns: 1fr !important;
-    padding: 1rem !important;
-    gap: 2rem !important;
-  }
-}
-
-    /* Hide toggle by default */
-.mobile-menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  margin-left: 1rem;
-  color: var(--color-primary);
-}
-
-/* Responsive navigation menu */
-@media (max-width: 768px) {
-  .nav-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.7rem 1.2rem;
-    min-height: 60px;
-    width: 100vw;
-  }
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-  }
-  .btn-get-started {
-    margin-left: auto;
-    margin-right: 0.6rem;
-  }
-  .mobile-menu-toggle {
-    display: block;
-    margin-left: 0.6rem;
-    background: none;
-    border: none;
-    font-size: 2.2rem;
-    color: var(--color-primary);
-    cursor: pointer;
-    padding: 0.2rem;
-  }
-}
-
-
   </style>
 </head>
 <body>
@@ -628,11 +577,6 @@
       </div>
       <nav>
         <ul class="nav-links" id="navLinks">
-          <button class="btn-get-started">Get Started</button>
-          <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation">
-  &#9776;
-</button>
-
           <li><a href="#home" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
