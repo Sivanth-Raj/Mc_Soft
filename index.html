@@ -626,22 +626,34 @@ nav {
 }
 
 .dropdown-menu {
+  display: none;
+  flex-direction: column;
   position: absolute;
-  top: 100%;
   left: 0;
+  top: 100%;
   background: var(--color-white);
   box-shadow: var(--shadow-md);
-  border-radius: 8px;
-  list-style: none;
+  padding: 0.5rem 0;
   min-width: 220px;
-  display: none;
-  z-index: 10;
+  z-index: 1000;
 }
 
-.dropdown:hover .dropdown-menu,
-.dropdown.active .dropdown-menu {
-  display: block;
+/* Show dropdown only if .dropdown.active */
+.dropdown.active > .dropdown-menu {
+  display: flex;
 }
+
+/* Mobile override: dropdown should be relative/static and full width */
+@media (max-width: 968px) {
+  .dropdown-menu {
+    position: static;
+    min-width: 0;
+    box-shadow: none;
+    background: inherit;
+    width: 100%;
+  }
+}
+
 
 @media (max-width: 968px) {
   .nav-container {
@@ -1221,16 +1233,24 @@ if (mobileMenuToggle && navLinks) {
 }
 
 // Dropdown toggle for mobile devices
+// Categories dropdown toggle for all screens (desktop + mobile)
 const dropdownToggle = document.querySelector('.dropdown-toggle');
 const dropdown = document.querySelector('.dropdown');
+
 if (dropdownToggle && dropdown) {
-  dropdownToggle.addEventListener('click', e => {
-    if (window.innerWidth < 968) {
-      e.preventDefault();
-      dropdown.classList.toggle('active');
+  dropdownToggle.addEventListener('click', function(e) {
+    e.preventDefault();
+    dropdown.classList.toggle('active');
+  });
+
+  // Optional: close dropdown when clicking anywhere outside
+  document.addEventListener('click', function(event) {
+    if (!dropdown.contains(event.target) && dropdown.classList.contains('active')) {
+      dropdown.classList.remove('active');
     }
   });
 }
+
 
     // Form submission
     const contactForm=document.getElementById('contactForm');
