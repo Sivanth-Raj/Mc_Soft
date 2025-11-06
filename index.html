@@ -609,12 +609,13 @@ nav {
 
 .nav-links {
   display: flex;
-  list-style: none;
+  flex-direction: row;
   gap: 2rem;
+  list-style: none;
   align-items: center;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
+  margin: 0;
+  padding: 0;
+  position: static;
 }
 
 .nav-links a {
@@ -681,18 +682,18 @@ nav {
     width: 100%;
   }
   .nav-links {
+    flex-direction: column;
     position: absolute;
     top: 100%;
     left: 0;
-    flex-direction: column;
     background: var(--color-white);
     width: 100vw;
     box-shadow: var(--shadow-md);
     gap: 1.3rem;
     padding: 2rem 1rem 1rem 1rem;
-    display: none;
     z-index: 99;
     align-items: flex-start;
+    display: none;
   }
   .nav-links.active {
     display: flex;
