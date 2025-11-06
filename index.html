@@ -586,35 +586,35 @@
 /* Responsive navigation menu */
 @media (max-width: 768px) {
   .nav-container {
-    flex-wrap: nowrap;
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 1.2rem;
+    min-height: 60px;
+    width: 100vw;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .btn-get-started {
+    margin-left: auto;
+    margin-right: 0.6rem;
   }
   .mobile-menu-toggle {
     display: block;
-  }
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    left: 0;
-    top: 60px; /* adjust as needed for your nav */
-    width: 100vw;
-    background: var(--color-white);
-    z-index: 1000;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    padding: 1rem 0.5rem;
-  }
-  .nav-links.active {
-    display: flex;
-  }
-  .dropdown-menu {
-    position: static !important;
-    width: 100%;
-    background: var(--color-background);
-    margin: 0;
-    box-shadow: none;
+    margin-left: 0.6rem;
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    color: var(--color-primary);
+    cursor: pointer;
+    padding: 0.2rem;
   }
 }
+
 
   </style>
 </head>
@@ -628,6 +628,7 @@
       </div>
       <nav>
         <ul class="nav-links" id="navLinks">
+          <button class="btn-get-started">Get Started</button>
           <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation">
   &#9776;
 </button>
