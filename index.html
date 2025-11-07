@@ -729,18 +729,22 @@ nav {
     text-align: center !important;
   }
   .hero-image {
-    margin-bottom: 0 !important;
-    width: 100% !important;
-    display: flex;
-    justify-content: center;
+    width: 100vw !important;
+    max-width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 auto !important;
   }
   .hero-image img {
-    max-width: 520px !important;   /* tweak as needed for your image */
-    width: 200% !important; 
+    max-width: 90vw !important;    /* fill most of the viewport width */
+    width: 90vw !important;
     height: auto !important;
+    min-width: 240px !important;   /* guarantees good visibility on all devices */
+    display: block !important;
     margin: 0 auto !important;
-    display: block;
   }
+  
   .hero-text {
     width: 100% !important;
   }
