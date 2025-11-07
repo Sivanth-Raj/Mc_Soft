@@ -761,7 +761,8 @@ nav {
 }
 @media (max-width: 700px) {
   .services-grid,
-  .services-card-grid {
+  .services-card-grid,
+  .cards-row {
     grid-template-columns: 1fr !important;
     display: grid !important;
     gap: 1.2rem !important;
@@ -769,58 +770,22 @@ nav {
     margin: 0 auto !important;
     padding: 0 1vw !important;
     overflow: visible !important;
+    height: auto !important;
   }
-  .service-card {
+  .service-card,
+  .card-split {
     width: 95vw !important;
     min-width: 0 !important;
     max-width: 99vw !important;
     margin: 0 auto !important;
-  }
-  
-  }
-   .cards-row {
-    flex-direction: column !important;
-    gap: 1.2rem !important;
-    padding: 0 2vw !important;
-    align-items: stretch !important;
-    width: 100vw !important;
-    max-width: 100vw !important;
-  }
-  .card-split {
-    width: 98vw !important;
-    min-width: 0 !important;
-    max-width: 99vw !important;
-    margin: 0 auto 1.4rem auto !important;
     height: auto !important;
-    display: block !important;
-  }
-  .img-half {
-    width: 100% !important;
-    height: auto !important;
-    overflow: hidden !important;
-    border-top-left-radius: 24px !important;
-    border-top-right-radius: 24px !important;
   }
   .img-half img {
     width: 100% !important;
     height: auto !important;
     max-width: 100% !important;
-    object-fit: cover !important;
-    border-radius: 24px 24px 0 0 !important;
   }
-  .content-half {
-    padding: 1.3rem 1rem !important;
-    text-align: left;
-  }
-  .card-number {
-    margin-bottom: 0.7rem !important;
-  }
-  .card-title {
-    font-size: 1.15rem !important;
-  }
-  .card-desc {
-    font-size: 1rem !important;
-  }
+}
 
 
   </style>
@@ -1027,7 +992,8 @@ nav {
   .card-split {
     width: 100%;
     min-width: 0;
-    height: 350px;
+    height: auto;  /* <-- Use this instead of a fixed height */
+    margin-bottom: 1.5rem;
   }
 }
 </style>
