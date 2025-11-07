@@ -729,20 +729,17 @@ nav {
     text-align: center !important;
   }
   .hero-image {
-    width: 100vw !important;
-    max-width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    margin: 0 auto !important;
+    margin-bottom: 0 !important;
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
   }
   .hero-image img {
-    max-width: 90vw !important;    /* fill most of the viewport width */
-    width: 90vw !important;
+    max-width: 420px !important;   /* tweak as needed for your image */
+    width: 100% !important; 
     height: auto !important;
-    min-width: 240px !important;   /* guarantees good visibility on all devices */
-    display: block !important;
     margin: 0 auto !important;
+    display: block;
   }
   
   .hero-text {
@@ -760,6 +757,31 @@ nav {
     gap: 1rem !important;
     width: 100%;
     align-items: center;
+  }
+}
+@media (max-width: 700px) {
+  .services-grid,
+  .services-card-grid,
+  .cards-row {
+    grid-template-columns: 1fr !important;
+    display: grid !important;
+    gap: 1.2rem !important;
+    width: 100vw !important;
+    margin: 0 auto !important;
+    padding: 0 1vw !important;
+    overflow: visible !important;
+  }
+  .service-card,
+  .card-split {
+    width: 95vw !important;
+    min-width: 0 !important;
+    max-width: 99vw !important;
+    margin: 0 auto !important;
+  }
+  .img-half img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
   }
 }
 
