@@ -720,6 +720,46 @@ nav {
   }
 }
 
+@media (max-width: 600px) {
+  .hero-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1.5rem !important; /* increase space above/below image and text */
+    text-align: center !important;
+  }
+  .hero-image {
+    margin-bottom: 0 !important;
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+  }
+  .hero-image img {
+    max-width: 320px !important;   /* tweak as needed for your image */
+    width: 100% !important; 
+    height: auto !important;
+    margin: 0 auto !important;
+    display: block;
+  }
+  .hero-text {
+    width: 100% !important;
+  }
+  .hero-text h2 {
+    font-size: 1.7rem !important;
+    margin-bottom: 0.8rem !important;
+  }
+  .hero-text p {
+    font-size: 1rem !important;
+  }
+  .hero-buttons {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    width: 100%;
+    align-items: center;
+  }
+}
+
+
   </style>
 </head>
 <body>
